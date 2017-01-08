@@ -60,7 +60,7 @@ function getExistingUrl(short,res){
 
 		coll.find({_id:short}).toArray(function(err,result){
 			if(err) throw err;
-			
+
 			if(!result[0]){
 				res.status(404).end("Invalid URL !");
 			}
